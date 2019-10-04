@@ -1,0 +1,324 @@
+/* ============
+     Fonts
+============ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap');
+/* font-family: 'Montserrat', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
+/* font-family: 'Baloo', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+/* font-family: 'Quicksand', sans-serif; */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  margin: 0;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ============
+General style
+============ */
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============
+Header style
+============ */
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c4965;
+  font-family: 'Montserrat', sans-serif;
+}
+nav .logo {
+  max-width: 300px;
+  height: 60px;
+  padding: 10px 20px;
+}
+nav .logo img {
+  max-width: 300px;
+  margin: auto;
+}
+nav ul {
+  width: 200px;
+  height: 60px;
+  margin-right: 20px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+nav li {
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+}
+.cover-picture {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display: flex;
+  background-image: url("images/dr.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+}
+.cover-picture .picture-mask {
+  width: 100%;
+  height: 700px;
+  position: absolute;
+  background-color: #59b6ff;
+  opacity: 0.3;
+}
+.cover-picture .page-header {
+  height: 130px;
+  width: 100%;
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: 9fr 1fr 6fr;
+  background-color: #ffffff73;
+}
+.page-header .header-left {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  opacity: 0.6;
+}
+.header-left h1,
+.header-left h2 {
+  margin-right: 50px;
+  margin-left: 30px;
+  color: #01051d;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 45px;
+  line-height: 1.1;
+}
+.header-left h2 {
+  color: #00a5ff;
+}
+.header-left h1 {
+  font-weight: 500;
+}
+.page-header .header-center {
+  display: flex;
+  align-items: top;
+}
+.header-center .flag {
+  opacity: 0.6;
+}
+.header-center .heart {
+  margin-left: -60px;
+  animation: pulse 1s ease infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.page-header .header-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-right img {
+  opacity: 0.5;
+  margin-left: 30px;
+}
+
+/* ============
+Content section
+============ */
+section {
+  padding: 90px 150px 60px;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+section.bg-section {
+  background-color: #dcebf6;
+}
+/* ---- section header ---- */
+.section-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section-header h3 {
+  color: #3a5368;
+  font-size: 32px;
+  font-weight: 500;
+}
+.section-header .middle-h3 {
+  color: #2bb2fc;
+}
+.section-header hr {
+  width: 50px;
+  margin: 20px 0;
+  border: 2px solid #2bb2fc;
+}
+/* ---- section content ---- */
+section .section-content {
+  display: grid;
+  justify-items: center;
+  color: #2f2d2d;
+  font-size: 22px;
+}
+section .kol-4 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+section .kol-3 {
+  padding-top: 80px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+}
+/* -- content: number-background -- */
+.section-content .number-box {
+  position: relative;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.number-box .number {
+  margin-top: 25px;
+  color: #2bb2fc;
+  font-family: 'Baloo', cursive;
+  font-size: 280px;
+  opacity: 0.4;
+}
+.number-box div {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.number-box div.adjusted-text-2 {
+  padding-left: 15px;
+}
+.number-box div.adjusted-text-3 {
+  padding: 0 45px 0 20px;
+}
+/* -- content: icons above title -- */
+.section-content .icon-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.icon-box img {
+  max-width: 100px;
+}
+.icon-box h4 {
+  padding: 15px 0 10px;
+  color: #075cad;
+  font-weight: 600;
+}
+.icon-box p {
+  max-width: 270px;
+  text-align: center;
+}
+/* -- content: paket boxes -- */
+.section-content .paket-box {
+  height: 400px;
+  width: 300px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #67b0de; /* #5365a8 */
+  border-radius: 50px;
+}
+.section-content .paket-box:nth-child(3) {
+  background-color: #5365a8;
+}
+.section-content .paket-box:nth-child(2) {
+  background-image: linear-gradient(#67b0de, #5365a8);
+}
+.paket-box img {
+  margin-bottom: 10px;
+  max-width: 35px;
+}
+.paket-box h4 {
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+}
+.paket-box hr {
+  width: 35px;
+  margin: 20px 0;
+  border: 2px solid white;
+}
+.paket-box ul {
+  align-self: flex-start;
+  margin:auto 5px;
+}
+.paket-box li {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.1;
+  text-indent: -5px;
+}
+.paket-box li::before {
+  content: "-";
+}
