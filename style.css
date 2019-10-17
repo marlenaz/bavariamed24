@@ -476,7 +476,7 @@ Media
     font-size: 130%;
   }
 }
-@media (max-width: 755px) {
+@media (max-device-width: 755px) {
   .wrapper {
     font-size: 200%;
   }
