@@ -476,11 +476,11 @@ Media
     font-size: 130%;
   }
 }
-@media (max-width: 755px) {
+@media all and (max-width: 755px) {
   .wrapper {
     font-size: 200%;
   }
   footer .footer-wrapper {
-    background: red;
+    background: blue;
   }
 }
