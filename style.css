@@ -477,11 +477,34 @@ Media
   }
 }
 @media all and (max-width: 755px),
-all and (max-device-width: 755px) {
-  .wrapper {
-    font-size: 200%;
+       all and (max-device-width: 755px) {
+  html {
+    font-size: 110%;
   }
+  /* -- header changes -- */
+  .cover-picture .page-header {
+    grid-template-columns: 1fr;
+  }
+  .page-header .header-left {
+    padding: 0 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .header-left h1,
+  .header-left h2 {
+    margin: 0;
+  }
+  .page-header .header-right,
+  .page-header .header-center {
+    display: none;
+  }
+  /* -- paket-box adjustments --*/
+  .section-content .paket-box {
+    height: 300px;
+    max-width: 100%;
+  }
+  /* -- footer font-size -- */
   footer .footer-wrapper {
-    background: grey;
+    font-size: 100%;
   }
 }
